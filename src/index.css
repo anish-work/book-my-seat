@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: #6c757d;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.seats-container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    animation: ease-in-out 10s;
+}
+.seat-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seat {
+    background-color: #6c757d;
+    width: 2em;
+    height: 1em;
+    margin: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: ease-in-out .1s;
+}
+
+.seat.selected {
+    background-color: #dc3545;
+}
+.seat.occupied {
+    background-color: darkblue;
+}
+.seat:nth-of-type(4) {
+    margin-right: 5em;
+}
+.seat:nth-last-of-type(4) {
+    margin-left: 5em;
+}
+/*media queries for seats*/
+
+@media (max-width: 1200px) {
+
+    .seat:nth-of-type(4) {
+        margin-right: 2.3em;
+    }
+    .seat:nth-last-of-type(4) {
+        margin-left: 2.3em;
+    }
+    .seat {
+        width: 1em;
+        height: 1em;
+        margin: 6px;
+
+    }
+}
+@media (max-width: 990px) {
+    .seat:nth-of-type(4) {
+        margin-right: 1.5em;
+    }
+    .seat:nth-last-of-type(4) {
+        margin-left: 1.5em;
+    }
+    .seat {
+        width:1em;
+        height: 1em;
+        margin: 2px;
+    }
+}
+@media (max-width: 450px) {
+    .seat:nth-of-type(4) {
+        margin-right: 1.5em;
+    }
+    .seat:nth-last-of-type(4) {
+        margin-left: 1.5em;
+    }
+    .seat {
+        width:1em;
+        height: 1em;
+        margin: 3px;
+    }
+}
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    width: 100%;
+    color: grey;
+    border-radius: 5px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+.screen {
+    background-color: gray;
+    height: 80px;
+    width: 100%;
+    margin: 15px 0 15px;
+    transform: rotateX(-50deg);
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.7);
+}
