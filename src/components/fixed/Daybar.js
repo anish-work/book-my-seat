@@ -53,7 +53,7 @@ export default function DayBar() {
         ))}
 
         <li className="nav-item bg-light">
-          <button className="nav-link text-dark bg-light font-weight-bold btn">
+          <button className="nav-link text-dark bg-light font-weight-bold btn btn-sm">
             {getMonth} {date.getDate() + 7}
           </button>
         </li>

@@ -72,7 +72,13 @@ body{
     .seat {
         width:1em;
         height: 1em;
-        margin: 2px;
+        margin: 1px;
+    }
+    .showcase .seat{
+        width: .7em;
+    }
+    .showcase{
+        justify-content: flex-start;
     }
 }
 @media (max-width: 450px) {
@@ -83,7 +89,7 @@ body{
         margin-left: 1.5em;
     }
     .seat {
-        width:1em;
+        width:2em;
         height: 1em;
         margin: 3px;
     }
@@ -96,19 +102,15 @@ body{
 
 .showcase {
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 5px 10px;
-    width: 100%;
     color: grey;
     border-radius: 5px;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .showcase li {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0px 10px;
 }
 .screen {
     background-color: gray;
